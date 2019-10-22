@@ -17,6 +17,8 @@ public class MainActivity extends AppCompatActivity {
     int scoreTeamB = 0 ;
     int wicketsTeamA = 0 ;
     int wicketsTeamB = 0 ;
+    int ballsA = 60 ;
+    int ballsB = 60 ;
 
 
     @Override
@@ -68,7 +70,11 @@ public class MainActivity extends AppCompatActivity {
      */
 
     public void addOneTeamA(View view) {
+        displayOversA() ;
 
+        if (ballsA <= 0) {
+            return ;
+        }
         if (wicketsTeamA == 10) {
             Toast.makeText(this,"Your team is all out",Toast.LENGTH_SHORT).show();
             return;
@@ -82,6 +88,10 @@ public class MainActivity extends AppCompatActivity {
      */
 
     public void addTwoTeamA(View view) {
+        displayOversA() ;
+        if (ballsA <= 0) {
+            return ;
+        }
 
         if (wicketsTeamA == 10) {
             Toast.makeText(this,"Your team is all out",Toast.LENGTH_SHORT).show();
@@ -96,7 +106,10 @@ public class MainActivity extends AppCompatActivity {
      */
 
     public void addFourTeamA(View view) {
-
+        displayOversA() ;
+        if (ballsA <= 0) {
+            return ;
+        }
         if (wicketsTeamA == 10) {
             Toast.makeText(this,"Your team is all out",Toast.LENGTH_SHORT).show();
             return;
@@ -110,6 +123,10 @@ public class MainActivity extends AppCompatActivity {
      */
 
     public void addSixTeamA(View view) {
+        displayOversA() ;
+        if (ballsA <= 0) {
+            return ;
+        }
 
         if (wicketsTeamA == 10) {
             Toast.makeText(this,"Your team is all out",Toast.LENGTH_SHORT).show();
@@ -124,6 +141,10 @@ public class MainActivity extends AppCompatActivity {
      */
 
     public void fallOfWicketA(View view) {
+        displayOversA() ;
+        if (ballsA <= 0) {
+            return ;
+        }
 
         if (wicketsTeamA == 10) {
             Toast.makeText(this,"10 wickets have already fallen for Team A", Toast.LENGTH_SHORT).show();
@@ -138,7 +159,10 @@ public class MainActivity extends AppCompatActivity {
      */
 
     public void addOneTeamB(View view) {
-
+        displayOversB() ;
+        if (ballsB <= 0) {
+            return ;
+        }
         if (wicketsTeamB == 10) {
             Toast.makeText(this,"Your team is all out",Toast.LENGTH_SHORT).show();
             return;
@@ -152,6 +176,12 @@ public class MainActivity extends AppCompatActivity {
      */
 
     public void addTwoTeamB(View view) {
+
+        displayOversB() ;
+
+        if (ballsB <= 0) {
+            return ;
+        }
         if (wicketsTeamB == 10) {
             Toast.makeText(this,"Your team is all out",Toast.LENGTH_SHORT).show();
             return;
@@ -166,6 +196,11 @@ public class MainActivity extends AppCompatActivity {
      */
 
     public void addFourTeamB(View view) {
+
+        displayOversB() ;
+        if (ballsB <= 0) {
+            return ;
+        }
         if (wicketsTeamB == 10) {
             Toast.makeText(this,"Your team is all out",Toast.LENGTH_SHORT).show();
             return;
@@ -179,6 +214,12 @@ public class MainActivity extends AppCompatActivity {
      */
 
     public void addSixTeamB(View view) {
+
+        displayOversB() ;
+
+        if (ballsB <= 0) {
+            return ;
+        }
 
         if (wicketsTeamB == 10) {
             Toast.makeText(this,"Your team is all out",Toast.LENGTH_SHORT).show();
@@ -194,6 +235,12 @@ public class MainActivity extends AppCompatActivity {
 
     public void fallOfWicketB(View view) {
 
+        displayOversB() ;
+
+        if (ballsB <= 0) {
+            return ;
+        }
+
         if (wicketsTeamB == 10) {
             Toast.makeText(this,"10 wickets have already fallen for Team B", Toast.LENGTH_SHORT).show();
             return ;
@@ -202,6 +249,51 @@ public class MainActivity extends AppCompatActivity {
         displayTeamBScore();
     }
 
+    /**
+     * This method calculates the number of overs left for the teamA and displays it
+     */
+
+    public void displayOversA() {
+
+        if (ballsA <= 0) {
+            Toast.makeText(this,"10 overs completed",Toast.LENGTH_SHORT).show();
+            return ;
+        }
+
+        else {
+
+            ballsA-- ;
+            int over = ballsA/6 ;
+            int ball = ballsA % 6 ;
+            String oversA = over + "." + ball ;
+            TextView oversATextView = findViewById(R.id.overs_A) ;
+            oversATextView.setText(oversA);
+        }
+
+    }
+
+    /**
+     * This method calculates the number of overs left for the teamB and displays it
+     */
+
+    public void displayOversB() {
+
+        if (ballsB <= 0) {
+            Toast.makeText(this,"10 overs completed",Toast.LENGTH_SHORT).show();
+            return ;
+        }
+
+        else {
+
+            ballsB-- ;
+            int over = ballsB/6 ;
+            int ball = ballsB % 6 ;
+            String oversB = over + "." + ball ;
+            TextView oversBTextView = findViewById(R.id.overs_B) ;
+            oversBTextView.setText(oversB);
+        }
+
+    }
 
 
 
