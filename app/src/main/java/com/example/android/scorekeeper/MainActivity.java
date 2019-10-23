@@ -63,9 +63,9 @@ public class MainActivity extends AppCompatActivity {
         ballsA = 60;
 
         TextView oversViewA = findViewById(R.id.overs_A);
-        oversViewA.setText("10.0");
+        oversViewA.setText(R.string.total_overs);
         TextView oversViewB = findViewById(R.id.overs_B);
-        oversViewB.setText("10.0");
+        oversViewB.setText(R.string.total_overs) ;
 
         displayTeamAScore();
         displayTeamBScore();

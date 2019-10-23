@@ -20,8 +20,7 @@
 
             <TextView
                 style="@style/team_name_text"
-                android:fontFamily="sans-serif-medium"
-                android:text="Team A" />
+                android:text="@string/teamA_name" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -32,19 +31,16 @@
                 <TextView
                     android:id="@+id/team_a_score"
                     style="@style/score_text"
-                    android:fontFamily="sans-serif-light"
-                    android:text="0" />
+                    android:text="@string/team_initial_score" />
 
                 <TextView
                     style="@style/score_text"
-                    android:fontFamily="sans-serif-light"
-                    android:text="/" />
+                    android:text="@string/separator" />
 
                 <TextView
                     android:id="@+id/team_a_wickets"
                     style="@style/score_text"
-                    android:fontFamily="sans-serif-light"
-                    android:text="0" />
+                    android:text="@string/team_initial_wickets" />
             </LinearLayout>
 
             <LinearLayout
@@ -56,7 +52,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Overs -"
+                    android:text="@string/overs_text"
                     android:textSize="24sp" />
 
                 <TextView
@@ -65,34 +61,34 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="8dp"
                     android:layout_marginBottom="24dp"
-                    android:text="10.0"
+                    android:text="@string/total_overs"
                     android:textSize="24sp" />
             </LinearLayout>
 
             <Button
                 style="@style/button_style"
                 android:onClick="addOneTeamA"
-                android:text="+1 Run" />
+                android:text="@string/add_one" />
 
             <Button
                 style="@style/button_style"
                 android:onClick="addTwoTeamA"
-                android:text="+2 Runs" />
+                android:text="@string/add_two" />
 
             <Button
                 style="@style/button_style"
                 android:onClick="addFourTeamA"
-                android:text="+4 Runs" />
+                android:text="@string/add_four" />
 
             <Button
                 style="@style/button_style"
                 android:onClick="addSixTeamA"
-                android:text="+6 Runs" />
+                android:text="@string/add_six" />
 
             <Button
                 style="@style/button_style"
                 android:onClick="fallOfWicketA"
-                android:text="wicket" />
+                android:text="@string/wicket" />
         </LinearLayout>
 
         <View
@@ -109,8 +105,7 @@
 
             <TextView
                 style="@style/team_name_text"
-                android:fontFamily="sans-serif-medium"
-                android:text="Team B" />
+                android:text="@string/team_b_name" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -121,19 +116,16 @@
                 <TextView
                     android:id="@+id/team_b_score"
                     style="@style/score_text"
-                    android:fontFamily="sans-serif-light"
-                    android:text="0" />
+                    android:text="@string/team_initial_score" />
 
                 <TextView
                     style="@style/score_text"
-                    android:fontFamily="sans-serif-light"
-                    android:text="/" />
+                    android:text="@string/separator" />
 
                 <TextView
                     android:id="@+id/team_b_wickets"
                     style="@style/score_text"
-                    android:fontFamily="sans-serif-light"
-                    android:text="0" />
+                    android:text="@string/team_initial_wickets" />
             </LinearLayout>
 
             <LinearLayout
@@ -145,7 +137,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Overs -"
+                    android:text="@string/overs_text"
                     android:textSize="24sp" />
 
                 <TextView
@@ -154,34 +146,34 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="8dp"
                     android:layout_marginBottom="24dp"
-                    android:text="10.0"
+                    android:text="@string/total_overs"
                     android:textSize="24sp" />
             </LinearLayout>
 
             <Button
                 style="@style/button_style"
                 android:onClick="addOneTeamB"
-                android:text="+1 Run" />
+                android:text="@string/add_one" />
 
             <Button
                 style="@style/button_style"
                 android:onClick="addTwoTeamB"
-                android:text="+2 Runs" />
+                android:text="@string/add_two" />
 
             <Button
                 style="@style/button_style"
                 android:onClick="addFourTeamB"
-                android:text="+4 Runs" />
+                android:text="@string/add_four" />
 
             <Button
                 style="@style/button_style"
                 android:onClick="addSixTeamB"
-                android:text="+6 Runs" />
+                android:text="@string/add_six" />
 
             <Button
                 style="@style/button_style"
                 android:onClick="fallOfWicketB"
-                android:text="wicket" />
+                android:text="@string/wicket" />
         </LinearLayout>
     </LinearLayout>
 
@@ -192,6 +184,6 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="32dp"
         android:onClick="reset"
-        android:text="Reset" />
+        android:text="@string/reset" />
 
 </RelativeLayout>
