@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?><!-- Layout for the cricket score counter. -->
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/stadium"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -50,19 +52,15 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/overs_text"
-                    android:textSize="24sp" />
+                    style="@style/overs_text"
+                    android:text="@string/overs_text" />
 
                 <TextView
                     android:id="@+id/overs_A"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                   style="@style/overs_text"
                     android:layout_marginLeft="8dp"
                     android:layout_marginBottom="24dp"
-                    android:text="@string/total_overs"
-                    android:textSize="24sp" />
+                    android:text="@string/total_overs" />
             </LinearLayout>
 
             <Button
@@ -135,19 +133,15 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/overs_text"
-                    android:textSize="24sp" />
+                    style="@style/overs_text"
+                    android:text="@string/overs_text" />
 
                 <TextView
                     android:id="@+id/overs_B"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/overs_text"
                     android:layout_marginLeft="8dp"
                     android:layout_marginBottom="24dp"
-                    android:text="@string/total_overs"
-                    android:textSize="24sp" />
+                    android:text="@string/total_overs" />
             </LinearLayout>
 
             <Button

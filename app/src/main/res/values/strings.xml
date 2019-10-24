@@ -1,4 +1,4 @@
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+<resources>
     <string name="app_name">ScoreKeeper</string>
     <string name="teamA_name">Team A</string>
     <string name="team_initial_score">0</string>
@@ -13,6 +13,9 @@
     <string name="wicket">wicket</string>
     <string name="team_b_name">Team B</string>
     <string name="reset">RESET</string>
-
+    <string name="all_out">Your team is already all out</string>
+    <string name="wickets_fallen_A">10 wickets have already fallen for Team A</string>
+    <string name="wickets_fallen_B">10 wickets have already fallen for Team B</string>
+    <string name="overs_finished_msg">10 overs completed</string>
 
 </resources>

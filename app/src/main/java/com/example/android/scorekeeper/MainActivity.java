@@ -32,21 +32,21 @@ public class MainActivity extends AppCompatActivity {
 
     public void displayTeamAScore() {
         TextView scoreText = findViewById(R.id.team_a_score);
-        scoreText.setText(Integer.toString(scoreTeamA));
+        scoreText.setText(String.valueOf(scoreTeamA));
         TextView wicketText = findViewById(R.id.team_a_wickets);
-        wicketText.setText(Integer.toString(wicketsTeamA));
+        wicketText.setText(String.valueOf(wicketsTeamA));
 
     }
 
     /**
-     * This method displays the score and wickets fallen so far for Team B.
+     * This method displays the score and number of wickets fallen so far for Team B.
      */
 
     public void displayTeamBScore() {
         TextView scoreText = findViewById(R.id.team_b_score);
-        scoreText.setText(Integer.toString(scoreTeamB));
+        scoreText.setText(String.valueOf(scoreTeamB));
         TextView wicketsText = findViewById(R.id.team_b_wickets);
-        wicketsText.setText(Integer.toString(wicketsTeamB));
+        wicketsText.setText(String.valueOf(wicketsTeamB));
 
     }
 
@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
         TextView oversViewA = findViewById(R.id.overs_A);
         oversViewA.setText(R.string.total_overs);
         TextView oversViewB = findViewById(R.id.overs_B);
-        oversViewB.setText(R.string.total_overs) ;
+        oversViewB.setText(R.string.total_overs);
 
         displayTeamAScore();
         displayTeamBScore();
@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
         if (wicketsTeamA == 10) {
-            Toast.makeText(this, "Your team is all out", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.all_out, Toast.LENGTH_SHORT).show();
             return;
         }
         scoreTeamA += 1;
@@ -102,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         if (wicketsTeamA == 10) {
-            Toast.makeText(this, "Your team is all out", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this,  R.string.all_out , Toast.LENGTH_SHORT).show();
             return;
         }
         scoreTeamA += 2;
@@ -119,7 +119,7 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
         if (wicketsTeamA == 10) {
-            Toast.makeText(this, "Your team is all out", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.all_out, Toast.LENGTH_SHORT).show();
             return;
         }
         scoreTeamA += 4;
@@ -137,7 +137,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         if (wicketsTeamA == 10) {
-            Toast.makeText(this, "Your team is all out", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.all_out, Toast.LENGTH_SHORT).show();
             return;
         }
         scoreTeamA += 6;
@@ -155,7 +155,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         if (wicketsTeamA == 10) {
-            Toast.makeText(this, "10 wickets have already fallen for Team A", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.wickets_fallen_A, Toast.LENGTH_SHORT).show();
             return;
         }
         wicketsTeamA += 1;
@@ -172,7 +172,7 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
         if (wicketsTeamB == 10) {
-            Toast.makeText(this, "Your team is all out", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.all_out, Toast.LENGTH_SHORT).show();
             return;
         }
         scoreTeamB += 1;
@@ -191,7 +191,7 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
         if (wicketsTeamB == 10) {
-            Toast.makeText(this, "Your team is all out", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.all_out, Toast.LENGTH_SHORT).show();
             return;
         }
 
@@ -210,7 +210,7 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
         if (wicketsTeamB == 10) {
-            Toast.makeText(this, "Your team is all out", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.all_out, Toast.LENGTH_SHORT).show();
             return;
         }
         scoreTeamB += 4;
@@ -230,7 +230,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         if (wicketsTeamB == 10) {
-            Toast.makeText(this, "Your team is all out", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.all_out, Toast.LENGTH_SHORT).show();
             return;
         }
         scoreTeamB += 6;
@@ -250,7 +250,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         if (wicketsTeamB == 10) {
-            Toast.makeText(this, "10 wickets have already fallen for Team B", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.wickets_fallen_B, Toast.LENGTH_SHORT).show();
             return;
         }
         wicketsTeamB += 1;
@@ -264,7 +264,7 @@ public class MainActivity extends AppCompatActivity {
     public void displayOversA() {
 
         if (ballsA <= 0) {
-            Toast.makeText(this, "10 overs completed", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.overs_finished_msg, Toast.LENGTH_SHORT).show();
             return;
         } else {
 
@@ -285,7 +285,7 @@ public class MainActivity extends AppCompatActivity {
     public void displayOversB() {
 
         if (ballsB <= 0) {
-            Toast.makeText(this, "10 overs completed", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.overs_finished_msg, Toast.LENGTH_SHORT).show();
             return;
         } else {
 
